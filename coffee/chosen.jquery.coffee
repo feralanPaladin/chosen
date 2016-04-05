@@ -91,6 +91,8 @@ class Chosen extends AbstractChosen
     @form_field_jq.bind "chosen:activate.chosen", (evt) => this.activate_field(evt); return
     @form_field_jq.bind "chosen:open.chosen", (evt) => this.container_mousedown(evt); return
     @form_field_jq.bind "chosen:close.chosen", (evt) => this.input_blur(evt); return
+    # onur_edit : Added for closing the chosen dropdown instantly. This event is needed when the chosen is selected before its actual tab order
+    @form_field_jq.bind "chosen:instantClose.chosen", (evt) => this.close_field(); return
 
     @search_field.bind 'blur.chosen', (evt) => this.input_blur(evt); return
     @search_field.bind 'keyup.chosen', (evt) => this.keyup_checker(evt); return
