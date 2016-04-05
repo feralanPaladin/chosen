@@ -158,7 +158,7 @@ class AbstractChosen
     escapedSearchText = searchText.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&")
     
     # snm_edit: Added Turkish Characters to search
-    var turkishLetterMap = { "Ý": "[Ýi]", "I": "[Iý]", "Þ": "[Þþ]", "Ð": "[Ðð]", "Ü": "[Üü]", "Ö": "[Öö]", "Ç": "[Çç]", "i": "[Ýi]", "ý": "[Iý]", "þ": "[Þþ]", "ð": "[Ðð]", "ü": "[Üü]", "ö": "[Öö]", "ç": "[Çç]" }
+    turkishLetterMap = { "Ý": "[Ýi]", "I": "[Iý]", "Þ": "[Þþ]", "Ð": "[Ðð]", "Ü": "[Üü]", "Ö": "[Öö]", "Ç": "[Çç]", "i": "[Ýi]", "ý": "[Iý]", "þ": "[Þþ]", "ð": "[Ðð]", "ü": "[Üü]", "ö": "[Öö]", "ç": "[Çç]" }
     escapedSearchText = escapedSearchText.replace(/(([ÝIÞÐÜÇÖiýþðüçö]))/g, (letter) -> return turkishLetterMap[letter] )
     
     zregex = new RegExp(escapedSearchText, 'i')
