@@ -13,7 +13,11 @@ module.exports = (grunt) ->
 Chosen, a Select Box Enhancer for jQuery and Prototype
 by Patrick Filler for Harvest, http://getharvest.com
 
-Version <%= pkg.version %>
+SFS Additions: 
+ - Turkish character support for search operations
+ - InstantClose event
+
+Base Version <%= pkg.version %>
 Full source at https://github.com/harvesthq/chosen
 Copyright (c) 2011-<%= grunt.template.today('yyyy') %> Harvest http://getharvest.com
 
